@@ -149,6 +149,8 @@
 
 + (NSString *)gh_decode:(NSString *)s {
 	if (!s) return nil;
+	// CFURLCreateStringByReplacingPercentEscapes doesn't handle spaces that are encoded as '+'
+	s = [s stringByReplacingOccurrencesOfString:@"+" withString:@" "];
 	return [NSMakeCollectable(CFURLCreateStringByReplacingPercentEscapes(NULL, (CFStringRef)s, CFSTR(""))) autorelease];
 }
 

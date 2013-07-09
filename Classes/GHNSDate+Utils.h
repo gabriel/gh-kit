@@ -241,6 +241,8 @@ extern NSString *const kDateFormatShortMonthFullYearTime;
  */
 - (NSString *)gh_timeAgo:(BOOL)includeSeconds;
 
+- (NSString *)gh_timeAgo:(BOOL)includeSeconds capitalize:(BOOL)capitalize;
+
 /*!
  Time ago in abbreviated format.
  For more info, especially on localization, see GHNSString+TimeInterval.h.

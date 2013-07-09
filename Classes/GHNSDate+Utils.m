@@ -171,8 +171,13 @@ NSUInteger const kUnitFlags = NSYearCalendarUnit | NSMonthCalendarUnit |  NSDayC
 	return formatted;
 }
 
-- (NSString *)gh_timeAgo:(BOOL)includeSeconds {	
-	return [NSString gh_stringForTimeInterval:[self timeIntervalSinceNow] includeSeconds:includeSeconds];
+- (NSString *)gh_timeAgo:(BOOL)includeSeconds {
+  return [self gh_timeAgo:includeSeconds capitalize:NO];
+}
+
+- (NSString *)gh_timeAgo:(BOOL)includeSeconds capitalize:(BOOL)capitalize {
+  return [NSString gh_stringForTimeInterval:[self timeIntervalSinceNow] includeSeconds:includeSeconds capitalize:capitalize];
+
 }
 
 - (NSString *)gh_timeAgoAbbreviated {

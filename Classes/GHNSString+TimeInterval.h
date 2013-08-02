@@ -44,6 +44,8 @@
  */
 + (NSString *)gh_stringForTimeInterval:(NSTimeInterval)interval includeSeconds:(BOOL)includeSeconds;
 
++ (NSString *)gh_stringForTimeInterval:(NSTimeInterval)interval includeSeconds:(BOOL)includeSeconds capitalize:(BOOL)capitalize;
+
 /*! 
  Time ago in words (localized).
  
@@ -71,6 +73,7 @@
  */
 + (NSString *)gh_localizedStringForTimeInterval:(NSTimeInterval)interval includeSeconds:(BOOL)includeSeconds tableName:(NSString *)tableName bundle:(NSBundle *)bundle;
 
++ (NSString *)gh_localizedStringForTimeInterval:(NSTimeInterval)interval includeSeconds:(BOOL)includeSeconds tableName:(NSString *)tableName bundle:(NSBundle *)bundle capitalize:(BOOL)capitalize;
 
 
 

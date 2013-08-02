@@ -302,6 +302,12 @@
 		00D02476154DFDD0003BAAC3 /* GHValidatorsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 00D023B0154DF89A003BAAC3 /* GHValidatorsTest.m */; };
 		00D02477154DFDF1003BAAC3 /* GTMRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 00D0240D154DFA87003BAAC3 /* GTMRegex.m */; };
 		00D02479154DFE14003BAAC3 /* test.file in Resources */ = {isa = PBXBuildFile; fileRef = 00D0240F154DFABF003BAAC3 /* test.file */; };
+		8461870E17AC250100D9556B /* GHNSString+Drawing.h in Headers */ = {isa = PBXBuildFile; fileRef = 8461870C17AC250100D9556B /* GHNSString+Drawing.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8461870F17AC250100D9556B /* GHNSString+Drawing.m in Sources */ = {isa = PBXBuildFile; fileRef = 8461870D17AC250100D9556B /* GHNSString+Drawing.m */; };
+		8461871017AC250C00D9556B /* GHNSString+Drawing.m in Sources */ = {isa = PBXBuildFile; fileRef = 8461870D17AC250100D9556B /* GHNSString+Drawing.m */; };
+		8461871117AC250C00D9556B /* GHNSString+Drawing.m in Sources */ = {isa = PBXBuildFile; fileRef = 8461870D17AC250100D9556B /* GHNSString+Drawing.m */; };
+		8461871217AC250C00D9556B /* GHNSString+Drawing.m in Sources */ = {isa = PBXBuildFile; fileRef = 8461870D17AC250100D9556B /* GHNSString+Drawing.m */; };
+		8461871317AC292000D9556B /* GHNSString+Drawing.h in Headers */ = {isa = PBXBuildFile; fileRef = 8461870C17AC250100D9556B /* GHNSString+Drawing.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -458,6 +464,8 @@
 		00D0245C154DFD66003BAAC3 /* EMKeychainProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMKeychainProxy.m; sourceTree = "<group>"; };
 		00D0245F154DFD92003BAAC3 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		00D0247A154DFE94003BAAC3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		8461870C17AC250100D9556B /* GHNSString+Drawing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GHNSString+Drawing.h"; sourceTree = "<group>"; };
+		8461870D17AC250100D9556B /* GHNSString+Drawing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GHNSString+Drawing.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -566,6 +574,8 @@
 				00D022A1154DF1C5003BAAC3 /* GHNSObject+Utils.m */,
 				00D022A4154DF1C5003BAAC3 /* GHNSString+HMAC.h */,
 				00D022A5154DF1C5003BAAC3 /* GHNSString+HMAC.m */,
+				8461870C17AC250100D9556B /* GHNSString+Drawing.h */,
+				8461870D17AC250100D9556B /* GHNSString+Drawing.m */,
 				00D022A6154DF1C5003BAAC3 /* GHNSString+TimeInterval.h */,
 				00D022A7154DF1C5003BAAC3 /* GHNSString+TimeInterval.m */,
 				00D022A8154DF1C5003BAAC3 /* GHNSString+URL.h */,
@@ -777,6 +787,7 @@
 			files = (
 				00D022FC154DF30E003BAAC3 /* GHCGUtils.h in Headers */,
 				00D02304154DF32C003BAAC3 /* GHKit.h in Headers */,
+				8461870E17AC250100D9556B /* GHNSString+Drawing.h in Headers */,
 				00D02306154DF333003BAAC3 /* GHKitDefines.h in Headers */,
 				00D02308154DF339003BAAC3 /* GHKitIOS.h in Headers */,
 				00D0230A154DF351003BAAC3 /* GHNSArray+Utils.h in Headers */,
@@ -823,6 +834,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8461871317AC292000D9556B /* GHNSString+Drawing.h in Headers */,
 				00D022FD154DF30F003BAAC3 /* GHCGUtils.h in Headers */,
 				00D02305154DF32C003BAAC3 /* GHKit.h in Headers */,
 				00D02307154DF334003BAAC3 /* GHKitDefines.h in Headers */,
@@ -1036,6 +1048,7 @@
 				00D02383154DF44F003BAAC3 /* GHNSString+UIKitUtils.m in Sources */,
 				00D02385154DF45A003BAAC3 /* GHUIColor+Utils.m in Sources */,
 				006BD87D15AE2FC900D493AE /* GHNSData+Base64.m in Sources */,
+				8461870F17AC250100D9556B /* GHNSString+Drawing.m in Sources */,
 				006BD88415AE2FF500D493AE /* ybase64.c in Sources */,
 				0084E68A1601103D0036580E /* GH_MAZeroingWeakRef.m in Sources */,
 			);
@@ -1069,6 +1082,7 @@
 				00D02361154DF3F4003BAAC3 /* GHNSString+XML.m in Sources */,
 				00D02365154DF3FD003BAAC3 /* GHNSStringEnumerator.m in Sources */,
 				00D02369154DF405003BAAC3 /* GHNSURL+Utils.m in Sources */,
+				8461871017AC250C00D9556B /* GHNSString+Drawing.m in Sources */,
 				00D0236D154DF40C003BAAC3 /* GHNSUserDefaults+Utils.m in Sources */,
 				00D02371154DF414003BAAC3 /* GHReversableDictionary.m in Sources */,
 				00D02375154DF41C003BAAC3 /* GHValidators.m in Sources */,
@@ -1127,6 +1141,7 @@
 				00D023E9154DF8D2003BAAC3 /* GHNSMutableArray+Utils.m in Sources */,
 				00D023EA154DF8D5003BAAC3 /* GHNSMutableDictionary+Utils.m in Sources */,
 				00D023EB154DF8D6003BAAC3 /* GHNSNotificationCenter+Utils.m in Sources */,
+				8461871117AC250C00D9556B /* GHNSString+Drawing.m in Sources */,
 				00D023EC154DF8D9003BAAC3 /* GHNSNumber+Utils.m in Sources */,
 				00D023ED154DF8DA003BAAC3 /* GHNSObject+Invocation.m in Sources */,
 				00D023EE154DF8DC003BAAC3 /* GHNSObject+Utils.m in Sources */,
@@ -1178,6 +1193,7 @@
 				00D02444154DFCAC003BAAC3 /* GHNSString+HMAC.m in Sources */,
 				00D02445154DFCAE003BAAC3 /* GHNSString+TimeInterval.m in Sources */,
 				00D02446154DFCB0003BAAC3 /* GHNSString+URL.m in Sources */,
+				8461871217AC250C00D9556B /* GHNSString+Drawing.m in Sources */,
 				00D02447154DFCB2003BAAC3 /* GHNSString+Utils.m in Sources */,
 				00D02448154DFCBB003BAAC3 /* GHNSString+XML.m in Sources */,
 				00D02449154DFCBD003BAAC3 /* GHNSStringEnumerator.m in Sources */,

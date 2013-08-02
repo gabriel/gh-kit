@@ -34,9 +34,19 @@
 @interface NSString(GHDrawing)
 
 /*!
+ sizeWithFont: is deprecated in iOS7, this wrapper calls the correct
+ method if the string responds to it (iOS7 only)
+ */
+- (CGSize)gh_sizeWithFont:(UIFont *)font;
+
+/*!
  sizeWithFont:constrainedToSize: is deprecated in iOS7, this wrapper calls the correct
  method if the string responds to it (iOS7 only)
  */
 - (CGSize)gh_sizeWithFont:(UIFont *)font constrainedToSize:(CGSize)size;
+
+- (CGSize)gh_sizeWithFont:(UIFont *)font forWidth:(CGFloat)width lineBreakMode:(NSLineBreakMode)lineBreakMode;
+
+- (CGSize)gh_sizeWithFont:(UIFont *)font constrainedToSize:(CGSize)size lineBreakMode:(NSLineBreakMode)lineBreakMode;
 
 @end

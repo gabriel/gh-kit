@@ -32,16 +32,43 @@
 
 @implementation NSString(GHDrawing)
 
+- (CGSize)gh_sizeWithFont:(UIFont *)font {
+  CGSize retSize;
+  if ([self respondsToSelector:@selector(sizeWithAttributes:)]) {
+    // iOS7 only
+    retSize = [self sizeWithAttributes:@{NSFontAttributeName: font}];
+  } else {
+    retSize = [self sizeWithFont:font];
+  }
+  retSize.width = ceilf(retSize.width);
+  retSize.height = ceilf(retSize.height);
+  return retSize;
+}
+
 - (CGSize)gh_sizeWithFont:(UIFont *)font constrainedToSize:(CGSize)size {
+  // Passing -1 as a "special" flag not to use lineBreakMode
+  return [self gh_sizeWithFont:font constrainedToSize:size lineBreakMode:-1];
+}
+
+- (CGSize)gh_sizeWithFont:(UIFont *)font forWidth:(CGFloat)width lineBreakMode:(NSLineBreakMode)lineBreakMode {
+  // Use CGFLOAT_MAX as a flag for size with width
+  return [self gh_sizeWithFont:font constrainedToSize:CGSizeMake(width, CGFLOAT_MAX) lineBreakMode:lineBreakMode];
+}
+
+- (CGSize)gh_sizeWithFont:(UIFont *)font constrainedToSize:(CGSize)size lineBreakMode:(NSLineBreakMode)lineBreakMode {
   CGSize retSize;
   if ([self respondsToSelector:@selector(boundingRectWithSize:options:attributes:context:)]) {
     // iOS7 only
-    retSize = [self boundingRectWithSize:size options:(NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingTruncatesLastVisibleLine) attributes:nil context:nil].size;
+    retSize = [self boundingRectWithSize:size options:(NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingTruncatesLastVisibleLine) attributes:@{NSFontAttributeName: font} context:nil].size;
   } else {
-    retSize = [self sizeWithFont:font constrainedToSize:size];
+    if ((NSInteger)lineBreakMode == -1) {
+      retSize = [self sizeWithFont:font constrainedToSize:size];
+    } else {
+      retSize = [self sizeWithFont:font constrainedToSize:size lineBreakMode:lineBreakMode];
+    }
   }
-  retSize.width = roundf(size.width);
-  retSize.height = round(size.height);
+  retSize.width = ceilf(retSize.width);
+  retSize.height = ceilf(retSize.height);
   return retSize;
 }
 
